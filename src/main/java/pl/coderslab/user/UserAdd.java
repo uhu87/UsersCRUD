@@ -17,7 +17,7 @@ public class UserAdd extends HttpServlet {
 
     protected void doGet (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        getServletContext().getRequestDispatcher("/add.jsp")
+        getServletContext().getRequestDispatcher("/WEB-INF/add.jsp")
                 .forward(request, response);
 
     }

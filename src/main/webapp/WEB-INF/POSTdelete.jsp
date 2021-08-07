@@ -95,7 +95,6 @@
 
                     <div class="card-body">
 
-
                         <p>Uzytkownik ${user.username} zostal usuniety.</p>
 
                     </div>

@@ -23,7 +23,7 @@ public class UserEdit extends HttpServlet {
 
         request.setAttribute("user", user);
 
-        getServletContext().getRequestDispatcher("/edit.jsp")
+        getServletContext().getRequestDispatcher("/WEB-INF/edit.jsp")
                 .forward(request, response);
 
 

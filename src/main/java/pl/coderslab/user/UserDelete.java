@@ -18,33 +18,23 @@ public class UserDelete extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String id = request.getParameter("id");
-
         User user = userDao.read(Integer.parseInt(id));
-
         request.setAttribute("user", user);
 
-        getServletContext().getRequestDispatcher("/delete.jsp")
+        getServletContext().getRequestDispatcher("/WEB-INF/delete.jsp")
                 .forward(request, response);
-
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
-
-
         String id = req.getParameter("id");
-
-
         User user = userDao.read(Integer.parseInt(id));
-
         req.setAttribute("user", user);
-
         userDAO.delete(Integer.parseInt(id));
 
+        getServletContext().getRequestDispatcher("/WEB-INF/POSTdelete.jsp")
+                .forward(req, resp);
 
-        resp.sendRedirect("/POSTdelete.jsp");
     }
 }
 

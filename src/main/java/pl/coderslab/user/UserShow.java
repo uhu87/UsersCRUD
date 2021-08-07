@@ -23,7 +23,7 @@ public class UserShow extends HttpServlet {
 
         request.setAttribute("user", user);
 
-        getServletContext().getRequestDispatcher("/show.jsp")
+        getServletContext().getRequestDispatcher("/WEB-INF/show.jsp")
                 .forward(request, response);
 
 
